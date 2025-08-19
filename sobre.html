@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Criação de Galinhas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <button class="menu-toggle" aria-label="Abrir menu principal">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -25,6 +33,8 @@
         <h2>Minha Jornada</h2>
         <p>A jornada começou em 2018/19, quando decidi ter um pequeno galinheiro no meu quintal. No início, enfrentei muitos desafios: a escolha da raça, a construção do galinheiro, e a busca por informações confiáveis. Foi por isso que decidi criar este site: para compartilhar tudo o que aprendi e facilitar o caminho de outros que, assim como eu, querem ter a alegria de criar galinhas.</p>
 
+        <p>A verdade é que tudo começou com uma única galinha, que foi dada de presente ao meu filho. Meu pai e eu, encantados com a ideia, abraçamos o projeto. O que era um presente se transformou em um galinheiro com mais de 200 aves. Esse trabalho me ajudou muito a combater a ansiedade e me conectou mais com a natureza. A criação de galinhas se tornou uma ótima terapia, me ensinando sobre paciência, cuidado e a beleza da vida simples.</p>
+        
         <p>Aqui, você encontrará dicas testadas na prática, guias detalhados e uma comunidade de apoio. Meu objetivo é provar que a criação de galinhas pode ser um hobby acessível e extremamente gratificante para qualquer pessoa.</p>
         
         <h2>Nossa Missão</h2>
@@ -35,5 +45,14 @@
         <p>&copy; 2025 Criação de Galinhas para Iniciantes. Todos os direitos reservados.</p>
     </footer>
     
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+
+        toggleButton.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            toggleButton.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

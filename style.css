@@ -1,87 +1,92 @@
-/* Estilos para o menu de navegação */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #A0522D; /* Cor marrom-claro */
-    text-align: center;
-}
-
-nav li {
-    display: inline-block; /* Faz com que os itens fiquem lado a lado */
-}
-
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold;
-}
-
-/* Efeito ao passar o mouse */
-nav li a:hover {
-    background-color: #8B4513; /* Cor marrom mais escura */
+/* Definição da paleta de cores usando variáveis CSS */
+:root {
+    --cor-primaria: #A0522D; /* Marrom-médio para o menu e rodapé */
+    --cor-secundaria: #8B4513; /* Marrom-escuro para títulos e hover */
+    --cor-destaque: #6B8E23; /* Verde oliva para botões e links de destaque */
+    --cor-fundo: #f0f0f0; /* Cinza claro para o fundo do corpo */
+    --cor-texto: #333; /* Cinza escuro para o texto */
+    --cor-clara: #fff; /* Branco para o fundo do main */
 }
 
 /* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.6;
     margin: 20px;
 }
 
 /* Estilos para os títulos */
 h1, h2 {
-    color: #8B4513; /* Cor marrom */
+    color: var(--cor-secundaria);
     text-align: center;
 }
 
-/* Estilos para a lista de seções na página inicial */
-body > ul {
-    list-style-type: none; /* Remove as bolinhas da lista */
-    padding: 0;
-}
-
-/* Estilos para os itens da lista de seções na página inicial */
-body > ul > li {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para as imagens dentro da galeria */
-.galeria img {
-    width: 100%; /* Garante que a imagem ocupe a largura total de seu container */
-    max-width: 250px; /* Limita o tamanho máximo para que caibam várias na linha */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Cria o layout de grade para as fotos da galeria */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Estilos para o contêiner principal do conteúdo */
+main {
+    max-width: 900px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: var(--cor-clara);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Estilos para o rodapé */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #A0522D; /* Cor do menu */
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
     margin-top: 30px;
 }
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--cor-primaria);
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+nav li a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Estilos para a lista de seções na página inicial */
+body > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilos para os itens da lista de seções na página inicial */
+body > ul > li {
+    background-color: var(--cor-clara);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma barra lateral com a cor de destaque */
+    border-left: 5px solid var(--cor-destaque);
+}
+
 /* Estilo para a imagem de destaque na página inicial */
 .imagem-destaque {
     width: 100%;
@@ -93,28 +98,18 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para a tag main que centraliza o conteúdo */
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 /* Estilos para o formulário de contato */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--cor-clara);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 label {
     font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
 input, textarea {
@@ -123,30 +118,134 @@ input, textarea {
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
+textarea {
+    resize: vertical;
+}
+
+/* Melhorias no botão de contato */
 button {
-    padding: 10px 20px;
-    background-color: #A0522D;
-    color: white;
+    padding: 12px 24px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-clara);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-    background-color: #8B4513;
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* Responsividade para telas menores, como celulares */
+
+/* Estilos para a galeria de fotos - Melhoria com CSS Grid */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Estilo para cada item da galeria (foto + legenda) */
+.galeria figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de zoom e sombra ao passar o mouse */
+.galeria figure:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Estilo para as imagens */
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilo para as legendas */
+.galeria figcaption {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: var(--cor-fundo);
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Estilos para o botão do menu hambúrguer */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos quando o menu está aberto */
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 600px) {
-    /* Ajusta o menu para telas pequenas */
-    nav li a {
-        padding: 10px 8px; /* Diminui o espaçamento dos itens do menu */
+    .menu-toggle {
+        display: block; /* Mostra o botão em telas pequenas */
     }
 
-    /* Reduz o tamanho da fonte dos títulos */
+    nav ul {
+        display: flex; /* Altera para display flex */
+        flex-direction: column; /* Organiza os itens em coluna */
+        height: 0; /* Esconde o menu por padrão */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    /* Classe adicionada pelo JavaScript para mostrar o menu */
+    nav ul.active {
+        height: 250px; /* Altura do menu aberto */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav li a {
+        padding: 10px 8px;
+    }
+
     h1 {
         font-size: 24px;
     }
@@ -154,19 +253,16 @@ button:hover {
     h2 {
         font-size: 20px;
     }
-    
-    /* Remove a sombra do main para dar mais espaço */
+
     main {
         box-shadow: none;
         padding: 10px;
     }
 
-    /* Oculta a lista de destaques na página inicial para evitar poluição visual */
     body > ul {
         display: none;
     }
 
-    /* Garante que o formulário de contato se ajuste */
     form {
         padding: 10px;
     }
