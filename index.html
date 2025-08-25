@@ -11,20 +11,23 @@
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Abrir menu principal">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menu principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="doencas.html">Doenças</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
     
     <main>
         <img src="galinha-principal.jpg" alt="Foto de uma galinha e um galo no campo" class="imagem-destaque">
@@ -40,7 +43,7 @@
 
         <section>
             <h2>Os Benefícios de Ter Galinhas Caipiras</h2>
-            <ul>
+            <ul class="lista-secoes">
                 <li><strong>Ovos Frescos e Nutritivos:</strong> Nada se compara ao sabor e qualidade de ovos vindos diretamente do seu galinheiro.</li>
                 <li><strong>Controle de Pragas Natural:</strong> Galinhas adoram comer insetos, o que ajuda a manter seu jardim livre de pragas.</li>
                 <li><strong>Fertilizante Orgânico de Qualidade:</strong> O esterco das galinhas é um excelente adubo para hortas e jardins.</li>
@@ -55,7 +58,7 @@
         <p>A galinha nos fornece duas das fontes de proteína mais acessíveis e versáteis do planeta: ovos e carne. O ovo, em particular, é um alimento nutricionalmente completo, rico em proteínas, vitaminas e minerais. Ele pode ser cozido, frito, mexido ou usado como ingrediente em uma infinidade de receitas, do bolo ao macarrão. A carne de frango, por sua vez, é uma proteína magra e saborosa que se adaptou a quase todas as culinárias do mundo.</p>
         
         <p>Além disso, a galinha nos fornece:</p>
-        <ul>
+        <ul class="lista-secoes">
             <li><strong>Pena:</strong> Usada para encher travesseiros, edredons, e até mesmo para fazer artesanato.</li>
             <li><strong>Adubo:</strong> As fezes da galinha, conhecidas como cama de frango, são um fertilizante natural de alta qualidade para a agricultura.</li>
             <li><strong>Pesquisa científica:</strong> Galinhas são usadas em laboratórios para pesquisa de vacinas, como a da gripe e a da febre amarela, e também para o estudo de embriologia.</li>
@@ -69,26 +72,28 @@
         <hr>
         
         <h2>Destaques do nosso site</h2>
-        <p>Confira o conteúdo mais popular e comece a sua jornada na criação de galinhas!</p>
-        <ul>
-            <li><a href="dicas.html"><b>Dicas Essenciais:</b> Guia completo para começar a criar galinhas do zero.</a></li>
-            <li><a href="galeria.html"><b>Galeria de Fotos:</b> Veja fotos das nossas galinhas e inspire-se.</a></li>
+        <p>Explore mais conteúdos nas nossas páginas:</p>
+        <ul class="lista-secoes">
+            <li><a href="dicas.html">Dicas essenciais para a sua criação.</a></li>
+            <li><a href="galeria.html">Galeria de fotos inspiradoras de galinhas.</a></li>
+            <li><a href="doencas.html">Guia sobre doenças e prevenção.</a></li>
+            <li><a href="sobre.html">Conheça nossa história e missão.</a></li>
+            <li><a href="contato.html">Fale conosco e tire suas dúvidas.</a></li>
         </ul>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 Criação de Galinhas para Iniciantes. Todos os direitos reservados.</p>
     </footer>
 
     <script>
         const toggleButton = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
+        const nav = document.querySelector('nav');
 
         toggleButton.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            nav.classList.toggle('active');
             toggleButton.classList.toggle('open');
         });
     </script>
-
 </body>
 </html>

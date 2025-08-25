@@ -11,20 +11,23 @@
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Abrir menu principal">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menu principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+                <li><a href="doencas.html">Doenças</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h1>Galeria de Fotos</h1>
@@ -33,7 +36,7 @@
         <div class="galeria">
             <figure>
                 <img src="galinha1.jpg" alt="Franguinhos com menos de 60 dias.">
-                <figcaption>Franguinhos com menos de 60 dias.</figcaption>
+                <figcaption>Galinha Polaca e Galinha Índia</figcaption>
             </figure>
             <figure>
                 <img src="galinha2.jpg" alt="Franguinhos com menos de 60 dias.">
@@ -41,11 +44,11 @@
             </figure>
             <figure>
                 <img src="galinha3.jpg" alt="Franguinhos com menos de 60 dias.">
-                <figcaption>Franguinhos com menos de 60 dias.</figcaption>
+                <figcaption>Galinhas de granjas criadas como caipiras</figcaption>
             </figure>
             <figure>
                 <img src="galinha4.jpg" alt="Pintinhos nascendo na chocadeira.">
-                <figcaption>Pintinhos nascendo na chocadeira.</figcaption>
+                <figcaption>Galinha Índia de plumagem preta</figcaption>
             </figure>
             <figure>
                 <img src="galinha5.jpg" alt="Galinhas sendo alimentadas.">
@@ -53,7 +56,7 @@
             </figure>
             <figure>
                 <img src="galinha6.jpg" alt="Creche com lâmpada nos primeiros dias de vida.">
-                <figcaption>Creche com lâmpada nos primeiros dias de vida.</figcaption>
+                <figcaption>Lindas Frangas Caipiras</figcaption>
             </figure>
             <figure>
                 <img src="galinha7.jpg" alt="Creche com lâmpada nos primeiros dias de vida.">
@@ -61,7 +64,7 @@
             </figure>
             <figure>
                 <img src="galinha8.jpg" alt="Franguinhos com menos de 60 dias.">
-                <figcaption>Franguinhos com menos de 60 dias.</figcaption>
+                <figcaption>Galo Polaco para corte</figcaption>
             </figure>
             <figure>
                 <img src="galinha9.jpg" alt="Galinhas botadeiras.">
@@ -81,11 +84,11 @@
             </figure>
             <figure>
                 <img src="galinha13.jpg" alt="Franguinhos com menos de 60 dias.">
-                <figcaption>Franguinhos com menos de 60 dias.</figcaption>
+                <figcaption>Galinha Embrapa 51</figcaption>
             </figure>
             <figure>
                 <img src="galinha14.jpg" alt="Frangos com aproximadamente 100 dias de vida.">
-                <figcaption>Frangos com aproximadamente 100 dias de vida.</figcaption>
+                <figcaption>Embrapa 51 e Caipira Comum</figcaption>
             </figure>
             <figure>
                 <img src="galinha15.jpg" alt="Galinhas e galo de reprodução.">
@@ -117,7 +120,7 @@
             </figure>
             <figure>
                 <img src="galinha22.jpg" alt="Galinhas caipiras pastando.">
-                <figcaption>Galinhas caipiras pastando.</figcaption>
+                <figcaption>Galinhas Rhodias e Galinha Plymouth Rock</figcaption>
             </figure>
             <figure>
                 <img src="galinha23.jpg" alt="Galinhas caipiras para reprodução, corte e produção de ovos.">
@@ -136,10 +139,10 @@
     
     <script>
         const toggleButton = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
+        const nav = document.querySelector('nav');
 
         toggleButton.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            nav.classList.toggle('active');
             toggleButton.classList.toggle('open');
         });
     </script>

@@ -11,20 +11,23 @@
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Abrir menu principal">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menu principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="doencas.html">Doenças</a></li>
+                <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h1>Sobre Nós</h1>
@@ -47,10 +50,10 @@
     
     <script>
         const toggleButton = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
+        const nav = document.querySelector('nav');
 
         toggleButton.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            nav.classList.toggle('active');
             toggleButton.classList.toggle('open');
         });
     </script>

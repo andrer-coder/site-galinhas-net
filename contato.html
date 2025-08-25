@@ -11,20 +11,23 @@
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Abrir menu principal">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menu principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="doencas.html">Doenças</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h1>Entre em Contato</h1>
@@ -32,13 +35,13 @@
         
         <form action="https://formspree.io/f/xrblwpaq" method="POST">
             <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" name="nome">
+            <input type="text" id="nome" name="nome" required>
             
             <label for="email">Seu E-mail:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="message" rows="5"></textarea>
+            <textarea id="mensagem" name="message" rows="5" required></textarea>
             
             <button type="submit">Enviar Mensagem</button>
         </form>
@@ -50,13 +53,12 @@
 
     <script>
         const toggleButton = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
+        const nav = document.querySelector('nav');
 
         toggleButton.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            nav.classList.toggle('active');
             toggleButton.classList.toggle('open');
         });
     </script>
-
 </body>
 </html>
